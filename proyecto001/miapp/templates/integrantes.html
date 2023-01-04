@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+    <h1>{{titulo}} :</h1>
+    <ul>
+        {% for estudiante in estudiantes %}
+                <li>
+                    {{forloop.counter}}.{{estudiante}}
+                </li>
+        {% endfor %}
+    </ul>
+{% endblock  %}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+            {{titulo}}
+        {% endblock  %}
+        | AGL_EF
+    </title>
+    {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    <header>
+        <div id="logotipo">
+            <h1>Examen Final LP3-S2</h1>
+        </div>
+        <div id="img">
+            <img src="{% static 'imagen/untels.png' %}" />
+        </div>
+        
+    </header>
+    <nav>        
+        <ul>
+            <li>
+                <a href="{% url 'inicio' %}">Inicio</a>
+            </li>
+            <li>
+                <a href="{% url 'integrantes' %}">Integrantes</a>
+            </li>
+            <li>
+                <a href="{% url 'crear_docente' %}">Crear Docente</a>
+            </li>
+            <li>
+                <a href="{% url 'listar_docente' %}">Listar Docente</a>
+            </li>
+            <li>
+                <a href="{% url 'crear_curso' %}">Crear Curso</a>
+            </li>
+            <li>
+                <a href="{% url 'listar_curso' %}">Listar Curso</a>
+            </li>   
+        </ul>
+    </nav>        
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+    <div id="content">
+        <div class="box">
+            
+            {% block content %}
+                <strong> Contenido en layout </strong>
+            {% endblock %}
+        </div>
+    </div>
+    
+    
+</body>
+</html>
