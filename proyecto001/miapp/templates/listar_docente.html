@@ -1,5 +1,32 @@
 {% extends 'layout.html' %}
-
+{% block title %}
+    {{titulo}}
+{% endblock %}
+ 
 {% block content %}
-    
-{% endblock  %}
+    <h1 class="title">{{titulo}} </h1>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="message">
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <ul>
+        {% for docente in docentes %}
+            <li>
+                <h4>{{docente.id}} - {{docente.nombre}}- {{docente.apellido_materno}}- {{docente.apellido_paterno}}- 
+                    {{docente.dni}}- {{docente.estado}} -{{docente.fecha_nacimiento}}</h4> 
+                <span>Creado:- {{docente.fecha_registro}}</span>
+                 {% if docente.publicado %}
+                    <strong> Publicado </strong>
+                {% else %}
+                    <strong> No Publicado/En Revisión </strong>
+                {% endif %}
+                    <a href="{% url 'eliminar_docente' id=docente.id %}">Eliminar</a>
+
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

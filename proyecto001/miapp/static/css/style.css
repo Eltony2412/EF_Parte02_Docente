@@ -4,6 +4,75 @@
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
+.box{
+    background: white;
+    width: 95%;
+    min-height: 930px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin: 0 auto;
+}
+
+.box form{
+    width: 40%;
+}
+.box form input, .box form label{
+    display: block;
+    padding: 5px;
+    padding-left: 0px;
+}
+.box form input[type="text"], 
+.box form textarea,
+.box form select{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.box form select{
+    width: 100px;
+    padding: 5px;
+}
+.box form input[type="submit"],
+.box form input[type="button"],
+.box form button{
+    padding: 10px;
+    margin-top: 5px;
+    background: #2ba977;
+    border: 1px solid #444;
+    color: white;
+    transition: 300ms all;
+ 
+}
+.rojo{
+    color: red;
+    box-shadow: 0px 0px 4px black;
+
+}
+
+.message{
+    padding: 20px;
+    background: #1f7e58;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.box form input[type="submit"]:hover,
+.box form input[type="button"]:hover,
+.box form button:hover{
+    cursor: pointer;
+    background: #1f7e58;
+}    
+
+
+.box p, .box h2, .box h3, .box ul{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.box ul, .box ol{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
 body{
     background-color: #f2f2f2;
 }

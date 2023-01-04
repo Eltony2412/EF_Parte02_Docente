@@ -26,4 +26,7 @@ urlpatterns = [
     path('listar_docente',views.listar_docente, name = "listar_docente"),
     path('crear_curso',views.crear_curso, name = "crear_curso"),
     path('listar_curso',views.listar_curso, name = "listar_curso"),
+     path('save_docente',views.save_docente, name='save_docente'), 
+     path('eliminar_docente/<int:id>',views.eliminar_docente, name='eliminar_docente'),
+
 ]
